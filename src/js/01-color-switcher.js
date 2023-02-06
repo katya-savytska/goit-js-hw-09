@@ -6,14 +6,12 @@ stopBtn.addEventListener('click', stopChangingColor);
 let intervalId = null;
 
 function changeBackgroundColor(){
-   intervalId = setInterval(()=>{
-    document.body.style.backgroundColor = getRandomHexColor();
-   }, 1000);
+   intervalId = setInterval(getRandomHexColor, 1000);
    startBtn.disabled = true;
 }
 
 function getRandomHexColor(){
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+   body.style.backgroundColor= `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
 
   function stopChangingColor(){
